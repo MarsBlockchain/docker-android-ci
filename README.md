@@ -1,4 +1,4 @@
-# Docker alpine curl git jq wget
+# Docker alpine with curl git jq wget
 
 Like it says, it's a docker image built on alpine with curl, git, jq, wget installed. Size 21 MB.
 
