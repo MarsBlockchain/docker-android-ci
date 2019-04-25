@@ -1,9 +1,9 @@
-FROM alpine:3.8
+FROM javiersantos/android-ci
 
 LABEL maintainer Justin Liu <justintwd@gmail.com>
 
-RUN apk --update add --no-cache curl git jq wget bash && \
-    rm -rf /var/lib/apt/lists/* && \
-    rm -rf /var/cache/apk/*
+RUN apt-get install -qqy --no-install-recommends \
+    bash \
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 CMD [ "tail", "-f", "/dev/null" ]
